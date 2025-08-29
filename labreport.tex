@@ -1,0 +1,214 @@
+% This is how a command looks in Latex
+% Small Command (too much, too little effect on style)
+% \command[options]{arguments} 
+
+% Big Command (Affect lots of styling)
+% Environment 
+% \begin{environment}
+
+% \end{environment}
+
+\documentclass[12pt]{article}
+\input{ecelatex}
+
+
+
+\begin{document}
+
+\ecetitlepage
+
+
+
+\tableofcontents
+\listoffigures
+\listoftables
+\newpage
+\begin{abstract}
+The abstract encapsulates the major portions of the report and addresses an audience that might not read the rest of the document. It may be read both by engineers looking for data and by non-engineers, managers who will make crucial decisions about engineering projects. The abstract provides a concise overview of your work. It should be about 100-200 words (one to three paragraphs). It should contain the highlights of the major parts of the report, including the objective, results, conclusions and recommendations. No details should be included. The information must be communicated in such a way that the reader can understand what was done, and what the outcome was, without having to read the rest of the report. The abstract should be written completely in textual form-that is, in sentences. It should not include equations or references to anything else in the report. It should read smoothly and coherently, not like a collection of sentences from different parts of the report. When the report describes results from several short experiments, the abstract should not resemble several small abstracts of the individual experiments, but must provide smooth transitions between them. Although the abstract is placed at the beginning of the report (for easy access by the reader), it should be written last, after the rest of the report has been completed. 
+\end{abstract}
+
+\newpage
+
+\section{Introduction}
+	The appropriate information for the introduction varies with the kind of report. Most introductions provide the reader with the necessary background to help put the objectives and results in a proper perspective. When necessary, previous related work is described. If the report is on several short experiments, the overall purpose and background of the group of experiments should be described first, followed by the necessary information for each of the experiments. In this case, the introduction should not be a mere collection of material on each, but should be written using connected paragraphs with clear transitions between ideas and information.
+The introduction should say why this series of tests is being done, and give any relevant background information. This is how to do citations of online source \cite{biblatex}, an article \cite{einstein}, or a book \cite{book_typical}.
+
+\subsection{Motivation}
+\label{sec:motivation}
+A paragraph identifying the motivation behind the project. Why design a solution? How will this make the world better? What are the benefits?
+
+
+\subsection{Problem Statement}
+\label{sec:ProblemStatement}
+A clear and concise paragraph describing the problem that your team is trying to solve. 
+
+\subsection{Literature Review}
+\label{sec:Literature}
+Multiple paragraph analyzing existing solutions found in good literature. You look at existing systems and analyze them. What do they do? What are their advantages and disadvantages? 
+
+
+\section{Design}
+Detail the procedure used to carry out the experiment step-by-step. The instruction sheet, together with the instructions given to you by the laboratory instructor, will be of help here. Sufficient information should be provided to allow the reader to repeat the experiment in an identical manner. Special procedures used to ensure specific experimental conditions, or to maintain a desired accuracy in the information obtained should be described.
+
+\subsection{Requirements Constraints, and  Considerations}
+
+A list of all design requirements and constraints developed from the project statements, discussion with the TAs, discussion with the faculty supervisor, or the end users. Consider the list given under the definition of Engineering Design in the Project Guidelines document of the ECE Course Project Kit. 
+Another list of (1) considerations made to public health, safety, and well-being, and (2) global, social, cultural, environmental, and economic factors.
+
+\subsection{Design Process}
+A description of the iterative process followed to reach the final design. Describe the process you followed. What are the alternative solutions considered? Why did you select the final design? Did you develop a first prototype? How did you refine the prototype after testing it? 
+
+\subsubsection{Replace with actual first exercise title}
+Explain the results of the first part of your project. Include all the necessary tables, K-Maps, Boolean expressions, circuit diagrams, output figures, etc. Do not simply include figures without discussing them. Nothing should be hand written and uploaded as an image. You can utilise various online software for K-Maps and circuit diagrams.
+\\
+
+\begin{enumerate}
+\item Step one, we develop the following code: 
+
+%write your code
+\begin{lstlisting}
+t=0:0.01:10 ; 
+f =1/2; 
+x_t=4*cos(2*pi*f*t)+2*cos(6*pi*t);
+subplot(211); plot(t,x_t);
+title('Continuous Time Signal');
+\end{lstlisting}
+
+\item Step two .. 
+\item Step three .. 
+\end{enumerate}
+
+
+\subsubsection{Replace with actual second exercise title}
+In the second exercise, we .. 
+
+\begin{enumerate}
+\item Step one ...
+\item Step two .. 
+\item Step three .. 
+\end{enumerate}
+
+\subsection{System Overview}
+A diagram describing the proposed solution components and connectors linking these component. A paragraph accompanying the diagram and describing to the reader how the system work/is-designed. This is a top level design (aka architectural design). 
+
+ \ecefigure
+{signals.jpg}
+{Figure Caption} %figure caption
+{figlabel}
+{1}  %size
+\FloatBarrier 
+
+\subsection{Component Design}
+These are multiple sections with figures, tables, derivations, calculations, algorithms, and formulas describing/detailing/designing the sub-systems or sub-components of the overall system. 
+
+\section{Experimental Testing and Results}
+
+\subsection{Testing Plan and Acceptance Criteria}
+Testing Plan: 3-5 pre-designed test cases. Test cases look like the following: 
+\begin{itemize}
+    \item Test Name: a name to recognize the test
+    \item Test Description: a paragraph detailing the purpose of the test. 
+
+\item steps followed during the experiment/test. 
+\item	Expected Results: what should we observe?
+\item Observed Results: what did we observe?
+\item	Acceptance Criteria: how will we know the test is successful?
+\item Test Result: Pass/Fail result after the test is done. 
+
+\end{itemize}
+
+\subsection{Results}
+Paragraphs with pictures, tables, measurements, and performance evaluations obtained through testing. A summary of the findings. 
+
+\subsubsection{Replace with actual first exercise title}
+Explain the results of the first part of your project. Include all the necessary tables, K-Maps, Boolean expressions, circuit diagrams, output figures, etc. Do not simply include figures without discussing them. Nothing should be hand written and uploaded as an image. You can utilise various online software for K-Maps and circuit diagrams.
+\\
+
+Figure \ref{fig:figlabel} shows the resulting signals.
+
+ \ecefigure
+{signals.jpg}
+{Figure Caption}
+{figlabel}
+{1}  
+\FloatBarrier 
+
+\subsubsection{Replace with actual second exercise title}
+Explain the results of the second part of your project. 
+
+Figure \ref{fig:figlabel2} shows the outcome.
+
+\ecefigure
+{labview3.png}
+{Figure Caption 2}
+{figlabel2}
+{1}  
+
+
+\subsection{Analysis and Interpretation of Data}
+This section is devoted to your interpretation of the outcome of the experiment or project. The information from the data analysis is examined and explained. You should describe, analyse and explain (not just restate) all your results. This section should answer the question 'what do the data tell me?' Describe any logical projections from the outcome, for instance the need to repeat the experiments or to measure certain variables differently. Assess the quality and accuracy of your procedure. Compare your results with expected behaviour, if such a comparison is useful or necessary, and explain any unexpected behaviour. 
+
+
+
+
+\section{Conclusion}
+\subsection{Summary}
+A summary of the entire report. Base all conclusions on your actual results. Explain the meaning of the experiment and the implications of your results. Examine the outcome in the light of the stated objectives. Seek to make conclusions in a broader context in the light of the results.
+
+\subsection{Future Improvements and Takeaways}
+What did we learn? What are the takeaways? How was this project useful? How do you evaluate the entire experience? 
+
+\subsection{Lessons Learned}
+What new knowledge did you acquire and apply in this project? Did you use a new technology? Did you go over a tutorial teaching you something new? Did you research about a topic and ended up applying what you learned? Did you learn something by experimenting in the lab? Did you learn something from your failed attempts? 
+
+\subsection{Team Dynamics}
+\begin{itemize}
+
+\item Who was the team leader? What evidence of good leadership can you provide? 
+\item	How did you create a collaborative and inclusive environment? Were all members engaged? How did the team communicate/collaborate? Did you create a WhatsApp group? Met in the library? Met in the lab? Communicated by emails? Where all members in attendance? Did you take meeting minutes?
+\item What goals did you set for your team? 
+\item	How did you plan the tasks? Did you use a Gantt Chart. Did you track  your progress and update your tasks?  
+\item	Did you meet your objectives? 
+
+\end{itemize}
+
+More information: \\
+
+Goals vs. Objectives: a team goal is a broad statement describing what does the team want to achieve. For example, a goal can be to design a low-cost robot capable of winning the sumo robot competition. 
+
+Objectives are measurable steps you take towards reaching your goal. For example, 
+\begin{itemize}
+    
+
+
+\item	Procure equipment by mid-October.
+\item	Design a robot chassis weighing 1kg using renewable material. 
+\item	Design a PCB no more than 3cm by 2cm to reduce the number of flying wires to 2 as a maximum. 
+    
+\end{itemize}
+
+A Gantt Chart: a figure indicating the tasks, their dependencies, their required efforts, and who’s responsible for them?
+
+\ecefigure
+{gantt.png}
+{Gantt Chart}
+{figlabel2}
+{1}  
+ 
+
+
+\subsection{Impact Statement}
+What is the impact of your engineering solution on the economy, the environment, and the society? 
+\begin{itemize}
+    \item 	Does your solution help society? How? 
+ \item	Are there any privacy concerns for the users? 
+ \item	Will your solution create jobs? Remove jobs from the market? 
+ \item	Will the electronics from your project end up being electronic waste? How did you reduce this? What impact does your system have on the environment? Does it reduce dependency on fossil fuel? Is it sustainable? 
+ \item	Does your system reduce energy demand? Increase energy demand? By how much? Is it still worth it? 
+ \item	Does your system provide comparable performance to existing one while reducing the cost? Reducing the power consumption? Reducing the environmental footprint? 
+\end{itemize}
+
+
+\bibliographystyle{IEEEtran}
+\bibliography{Bibliography}
+\end{document}

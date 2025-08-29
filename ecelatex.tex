@@ -1,0 +1,93 @@
+\usepackage{blindtext, graphicx}
+\usepackage{listings}
+\usepackage{color,xcolor}
+\usepackage{listings}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{cite}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{url}
+\usepackage{placeins}
+
+
+
+\newcommand{\ecefigure}[4]
+{
+	\begin{figure}[!htbp]
+	\centering 
+	\includegraphics[width=#4\textwidth]{pic/#1}
+	\caption{#2.\label{fig:#3}}
+	\end{figure}
+}
+
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{bgcolor}{rgb}{0.97,0.97,0.9}
+
+\lstset{frame=lrbt,
+backgroundcolor=\color{bgcolor},
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true
+  tabsize=3,
+  numbers=left,
+  stepnumber=1,    
+  firstnumber=1,
+  numberfirstline=true
+}
+
+\newcommand*{\plogo}{} % Generic publisher logo
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+
+
+\newcommand*{\ecetitlepage}{\begingroup % Create the command for including the title page in the document
+\hbox{ % Horizontal box
+%\hspace*{0.2\textwidth} % Whitespace to the left of the title page
+\includegraphics[scale=.3]{pic/logo}\hfill
+\rule{1pt}{\textheight} % Vertical line
+\hspace*{0.05\textwidth} % Whitespace between the vertical line and title page text
+\parbox[b]{0.75\textwidth}{ % Paragraph box which restricts text to less than the width of the page
+
+{\noindent\Huge\bfseries Project Report \\ [0.5\baselineskip] Project Title}\\[5\baselineskip] % Title
+
+
+
+{\textit{First Student Name \; First Student ID}}
+\\[0.3\baselineskip] % Tagline or further description
+{\textit{Second Student Name \; Second Student ID}}
+\\[0.3\baselineskip] % Tagline or further description
+{\textit{Third Student Name \; Third Student ID}}
+\\[0.3\baselineskip]
+{\textit{Fourth Student Name \; Fourth Student ID}} \\ 
+
+
+
+{\large \textsc{Supervised By: Prof. Mohammed Ghazal }} 
+
+
+\vspace{0.4\textheight} % Whitespace between the title block and the publisher
+{\noindent Submitted: \today \plogo}\\[\baselineskip] % Publisher and logo
+}}
+\endgroup}
+
+
+%----------------------------------------------------------------------------------------
+%	BLANK DOCUMENT
+%----------------------------------------------------------------------------------------
